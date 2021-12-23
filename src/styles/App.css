@@ -1,0 +1,138 @@
+:root {
+  --bg: #dadada;
+  --dark-text: #3b3b3b;
+  --main: #28ba74;
+  --main-hover: #42d88f;
+}
+
+body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--dark-text);
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  width: 450px;
+  background: white;
+  border-radius: 10px;
+}
+
+.auth-logo {
+  font-family: Saira;
+  color: var(--main);
+  margin: 0;
+  font-size: 20px;
+}
+
+.auth-title {
+  font-family: Saira;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.auth-input {
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.auth-form {
+  width: 70%;
+}
+
+.auth-button {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  background: var(--main);
+  border: 0;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+.auth-button:hover {
+  background: var(--main-hover);
+}
+
+.auth-link {
+  text-align: center;
+  text-decoration: none;
+  color: var(--main);
+  font-weight: 500;
+  transition: all 0.1s ease;
+}
+
+.auth-link:hover {
+  color: var(--main-hover);
+}
+
+.auth-google {
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 70%;
+  height: 45px;
+  cursor: pointer;
+  background: #007bff;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+.auth-google div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 35px;
+  background: white;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+.auth-google div svg {
+  width: 80%;
+  height: 80%;
+}
+
+.auth-google p {
+  width: 100%;
+  text-align: center;
+}
+
+.auth-google:hover {
+  background: #2a91ff;
+}

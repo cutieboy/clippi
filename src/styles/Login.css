@@ -1,0 +1,28 @@
+.login h2 {
+  margin: 0;
+}
+
+.login-signup {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.email-login-container {
+  margin-top: 20px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+.email-login-container p {
+  width: 480px;
+  text-align: center;
+}
+
+.login-line {
+  height: 1px;
+  width: 100%;
+  background: #aaa;
+}

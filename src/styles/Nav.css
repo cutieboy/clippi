@@ -1,0 +1,46 @@
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 100%;
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  height: 100%;
+}
+
+.nav h1 {
+  color: var(--main);
+  font-family: Saira;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  margin-left: auto;
+  text-decoration: none;
+  color: var(--main);
+  font-family: Saira;
+}
+
+.nav-log-out {
+  border: 2px solid var(--main);
+  background: 0;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 3px 10px 3px 10px;
+  transition: all 0.1s ease;
+}
+
+.nav-log-out:hover {
+  background: var(--main);
+  color: white;
+}
