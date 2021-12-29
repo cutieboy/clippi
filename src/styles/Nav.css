@@ -15,11 +15,12 @@
   height: 100%;
 }
 
-.nav h1 {
+.nav-logo {
   color: var(--main);
   font-family: Saira;
-  margin: 0;
-  padding: 0;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 22px;
 }
 
 .nav-link {

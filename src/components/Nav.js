@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuth } from '../contexts/AuthContext'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 function Nav() {
     const { currentUser, logout } = useAuth()
@@ -18,7 +18,7 @@ function Nav() {
     return (
         <div className="nav-container">
             <nav className="nav">
-                <h1>Clippi</h1>
+                <Link className="nav-logo" to="/">Clippi</Link>
                 {currentUser && <button onClick={handleLogout} className="nav-link nav-log-out" to="/login">Log Out</button>}
             </nav>
         </div>

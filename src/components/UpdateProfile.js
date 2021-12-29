@@ -37,29 +37,27 @@ function UpdateProfile() {
     
     return (
         <>
-            <div>
-                <div>
-                    <h2>Login</h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    <form onSubmit={handleUpdateProfile}>
-                        <div id="email">
-                            <label>Email</label>
-                            <input ref={emailRef} type="email" defaultValue={currentUser.email} required />
+            <div className="auth-container">
+                <div className="auth">
+                    <h3 className="auth-logo">Clippi</h3>
+                    <h2 className="auth-title">Update Profile</h2>
+                    {error && <Alert className="alert">{error}</Alert>}
+                    <form className="auth-form" onSubmit={handleUpdateProfile}>
+                        <div className="form-group" id="email">
+                            <input className="auth-input" ref={emailRef} placeholder="Email" type="email" defaultValue={currentUser.email} required />
                         </div>
-                        <div id="password">
-                            <label>New Password</label>
-                            <input ref={passwordRef} type="password" placeholder="Leave blank to keep the same" />
+                        <div className="form-group" id="password">
+                            <input className="auth-input" ref={passwordRef} type="password" placeholder="New Password" />
                         </div>
-                        <div id="password">
-                            <label>Confirm Password</label>
-                            <input ref={confirmPasswordRef} type="password" placeholder="Passwords must match" />
+                        <div className="form-group" id="password">
+                            <input className="auth-input" ref={confirmPasswordRef} type="password" placeholder="Confirm Password" />
                         </div>
-                        <button disable={loading} type="submit">Update</button>
+                        <button className="auth-button" disable={loading} type="submit">Update</button>
                     </form>
+                    <div>
+                        <Link className="auth-link" to="/">Cancel</Link>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <Link to="/">Cancel</Link>
             </div>
         </>
     )

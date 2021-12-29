@@ -26,19 +26,19 @@ function ForgotPassword() {
     
     return (
         <>
-            <div>
-                <div>
-                    <h2>Reset Password</h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    {message && <Alert variant="success">{message}</Alert>}
-                    <form onSubmit={handleForgotPassword}>
-                        <div id="email">
-                            <label>Email</label>
-                            <input ref={emailRef} type="email" required />
+            <div className="auth-container">
+                <div className="auth">
+                    {error && <Alert className="alert" variant="danger">{error}</Alert>}
+                    {message && <Alert className="alert" variant="success">{message}</Alert>}
+                    <h3 className="auth-logo">Clippi</h3>
+                    <h2 className="auth-title">Reset Password</h2>
+                    <form className="auth-form" onSubmit={handleForgotPassword}>
+                        <div className="form-group" id="email">
+                            <input placeholder="Email" className="auth-input" ref={emailRef} type="email" required />
                         </div>
-                        <button disable={loading} type="submit">Reset Password</button>
-                        <div>
-                            <Link to="/login">Back to Login</Link>
+                        <button className="auth-button" disable={loading} type="submit">Reset Password</button>
+                        <div className="login-signup">
+                            <Link className="auth-link" to="/login">Back to Login</Link>
                         </div>
                     </form>
                 </div>

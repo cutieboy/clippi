@@ -62,6 +62,7 @@ body {
   height: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
+  padding-left: 10px;
 }
 
 .auth-form {
@@ -135,4 +136,14 @@ body {
 
 .auth-google:hover {
   background: #2a91ff;
+}
+
+.alert {
+  background: var(--main);
+  width: 300px;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }

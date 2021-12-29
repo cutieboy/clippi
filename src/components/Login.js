@@ -65,10 +65,10 @@ function Login() {
                     </div>
                     <form className="auth-form" onSubmit={handleSubmit}>
                         <div className="form-group" id="email">
-                            <input className="auth-input" ref={emailRef} type="email" required />
+                            <input placeholder="Email" className="auth-input" ref={emailRef} type="email" required />
                         </div>
                         <div className="form-group" id="password">
-                            <input className="auth-input" ref={passwordRef} type="password" required />
+                            <input placeholder="Password" className="auth-input" ref={passwordRef} type="password" required />
                         </div>
                         <button disable={loading} className="auth-button" type="submit">Log In</button>
                         <div className="login-signup">

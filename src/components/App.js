@@ -13,6 +13,7 @@ import Nav from './Nav'
 import '../styles/App.css'
 import '../styles/Nav.css'
 import '../styles/Login.css'
+import '../styles/Dashboard.css'
 
 function App() {
   return (
