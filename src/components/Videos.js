@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import Video from './Video'
+// import Video from './Video'
 
 function Videos() {
-    const [loading, setLoading] = useState(false)
+    // const [loading, setLoading] = useState(false)
 
     return (
         <div>
