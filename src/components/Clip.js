@@ -1,16 +1,21 @@
 import React from 'react'
+import ReactPlayer from 'react-player'
 
 function Clip(props) {
-    // const { publicId, name, slug, url, user }
+    const { name, slug, url, user } = props
 
     return (
-        <div>hi</div>
-        // <Video cloudName="clippi" publicId={publicId}>
-        //     {url}
-        //     {user}
-        //     {name}
-        //     {slug}
-        // </Video>
+        <div className="clip-container">
+            <ReactPlayer 
+                className="clip-video" 
+                controls 
+                url={url}
+                width="100%"
+                height="56.25%"
+                />
+            <p>{name}</p>
+            <p>https://clippi.io/{slug} Copy Link</p>
+        </div>
     )
 }
 

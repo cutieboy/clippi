@@ -16,6 +16,7 @@ function Videos() {
     const videoDatabase = firestore.collection('videos')
     const videoQuery = videoDatabase.where("user", "==", currentUser.uid)
     const [videos] = useCollectionData(videoQuery)
+    console.log(clips)
 
     useEffect(() => {
         if(videos) {
@@ -31,8 +32,8 @@ function Videos() {
 
     return (
         <div className="videos-container">
-            {clips.map(clip => {
-                return <Clip />
+            {clips.map((clip, i) => {
+                return <Clip key={"video-" + i} name={clip.name} slug={clip.slug} url={clip.url} user={clip.user} />
             })}
         </div>
     )
