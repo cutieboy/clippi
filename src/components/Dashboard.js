@@ -11,41 +11,50 @@ import Videos from './Videos.js'
 
 function Dashboard() {
     const { currentUser } = useAuth()
+    function generateUID() {
+        var firstPart = (Math.random() * 46656) | 0;
+        var secondPart = (Math.random() * 46656) | 0;
+        firstPart = ("000" + firstPart.toString(36)).slice(-3);
+        secondPart = ("000" + secondPart.toString(36)).slice(-3);
+        return firstPart + secondPart;
+    }
 
     const videoDatabase = firestore.collection('videos')
 
-    const [videoSelected, setVideoSelected] = useState({})
+    const [loading, setLoading] = useState(false)
 
     const uploadVideo = async(videoData) => {
-        if(!videoSelected.name) return
+        setLoading(true)
+        if(!videoData.name) return
+        console.log(videoData)
         const formData = new FormData()
         formData.append("file", videoData)
         formData.append("upload_preset", "zzbgejjn")
 
         try {
             const response = await Axios.post("https://api.cloudinary.com/v1_1/clippi/video/upload", formData)
-            videoDatabase.add({
-                name: videoSelected.name,
+            await videoDatabase.add({
+                name: videoData.name,
                 url: response.data.url,
                 user: currentUser.uid,
+                slug: generateUID(),
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             })
         } catch(err) {
             console.log(err.message)
         }
 
-        setVideoSelected({})
+        setLoading(false)
     }
 
     return (
         <CloudinaryContext cloudName="clippi">
             <div className="dashboard-container">
                 <div className="dashboard">
-                    <div>
+                    <div className="upload-button-container">
                         <label className="upload-button">
                             <input style={{display: 'none'}} type="file" onChange={(e) => {
-                                setVideoSelected(e.target.files[0])
-                                uploadVideo(videoSelected)
+                                if(!loading) uploadVideo(e.target.files[0])
                             }} />
                             Upload Video
                         </label>

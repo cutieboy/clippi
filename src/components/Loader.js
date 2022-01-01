@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Video() {
+function Loader() {
     return (
         <div>
-            
+                LOADING!!!
         </div>
     )
 }
 
-export default Video
+export default Loader

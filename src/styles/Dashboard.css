@@ -17,6 +17,9 @@
 }
 
 .upload-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 100px 10px 100px;
   background: var(--main);
   color: white;
